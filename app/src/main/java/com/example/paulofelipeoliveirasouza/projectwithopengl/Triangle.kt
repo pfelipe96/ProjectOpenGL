@@ -13,7 +13,7 @@ class Triangle {
     private val vertexBuffer: FloatBuffer
 
     // Set color with red, green, blue and alpha (opacity) values
-    internal var color = floatArrayOf(0.63671875f, 0.76953125f, 0.22265625f, 1.0f)
+    internal var color = floatArrayOf(0.63671875f, 0.76953125f, 0.22265625f, 0.22265625f)
 
     private var mPositionHandle: Int = 0
     private var mColorHandle: Int = 0
@@ -79,9 +79,9 @@ class Triangle {
         // number of coordinates per vertex in this array
         internal val COORDS_PER_VERTEX = 3
         internal var triangleCoords = floatArrayOf(// in counterclockwise order:
-                0.0f, 0.622008459f, 0.1f, // top
-                -0.5f, -0.311004243f, 0.1f, // bottom left
-                0.5f, -0.311004243f, 0.1f  // bottom right
+                0.0f, 0.622008459f, 0.6f, // top 9
+                -0.5f, 0.0f, 0.0f, // bottom left
+                0.5f, 0.0f, 0.0f  // bottom right
         )
     }
 

@@ -12,6 +12,7 @@ import javax.microedition.khronos.egl.EGLConfig
 class MyGLRenderer : GLSurfaceView.Renderer {
 
     private lateinit var mTriangle: Triangle
+    private lateinit var mSquare: Square
 
     private val mMVPMatrix = FloatArray(16)
     private val mProjectionMatrix = FloatArray(16)
@@ -26,6 +27,8 @@ class MyGLRenderer : GLSurfaceView.Renderer {
         GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f)
 
         mTriangle = Triangle()
+
+//        mSquare = Square()
     }
 
     override fun onDrawFrame(unused: GL10) {
@@ -41,7 +44,7 @@ class MyGLRenderer : GLSurfaceView.Renderer {
 
         // Create a rotation transformation for the triangle
 
-        Matrix.setRotateM(mRotationMatrix, 0, mAngle, 0f, 0f, -1.0f)
+        Matrix.setRotateM(mRotationMatrix, 0, mAngle, 0f, 0f, -1f)
 
 
         // Combine the rotation matrix with the projection and camera view
